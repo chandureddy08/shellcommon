@@ -10,6 +10,8 @@ G="e\[32m"
 Y="e\[33m"
 N="e\[0m"
 
+trap 'failure ${LINENO} "$BASH_COMMAND"' ERR
+
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
