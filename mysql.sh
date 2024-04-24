@@ -2,7 +2,6 @@
 
 source ./common.sh
 
-handle_error
 check_root
 
 echo "Please enter DB Password:"
