@@ -1,6 +1,7 @@
 #!/bin/bash
 
-
+./common.sh
+check_root
 
 dnf install nginx -y &>>$LOGFILE
 VALIDATE $? "Installing ngnix"
