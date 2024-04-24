@@ -1,5 +1,12 @@
 #!/bin/bash
 
+
+set -e
+handle_error(){
+    echo "Error occured at line no: $1 and Error command is: $2"
+}
+trap 'failure ${LINENO} "$BASH_COMMAND"' ERR
+
 USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
@@ -10,7 +17,6 @@ G="e\[32m"
 Y="e\[33m"
 N="e\[0m"
 
-trap 'failure ${LINENO} "$BASH_COMMAND"' ERR
 
 VALIDATE(){
     if [ $1 -ne 0 ]
