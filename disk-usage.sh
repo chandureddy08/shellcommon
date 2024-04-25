@@ -12,6 +12,4 @@ do
     then
         echo "$FOLDER is more than $DISK_THRESHOLD, current usage is: $USAGE"
     fi
-
-
 done <<< $DISK_USAGE
