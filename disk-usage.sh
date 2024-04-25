@@ -8,7 +8,7 @@ DISK_THRESHOLD=6
 do
     USAGE=$(echo $line | awk -F " " '{print $6F}' | cut -d "%" -f1)
     FOLDER=$(echo $line | awk -F " " '{print $6F}')
-    if [ $USAGE -ge $DISK_THRESHOLD]
+    if [$USAGE -ge $DISK_THRESHOLD]
     then
         echo "$FOLDER is more than $DISK_THRESHOLD, current usage is: $USAGE"
     fi
