@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DISK_USGAE=$(df -ht | grep xfs)
+DISK_USGAE=$(df -hT | grep xfs)
 
 DISK_THRESHOLD=6
 
